@@ -2,7 +2,6 @@
 
 A personal finance tracker built using **Python & Streamlit** to manage income, expenses, and monthly insights, designed for real-life usage.
 
-![Repo Size](https://img.shields.io/github/repo-size/madhurimarawat/BudgetFlow?color=blue&style=for-the-badge)
 ![Stars](https://img.shields.io/github/stars/madhurimarawat/BudgetFlow?color=yellow&style=for-the-badge)
 ![Issues](https://img.shields.io/github/issues/madhurimarawat/BudgetFlow?color=red&style=for-the-badge)
 ![Customization](https://img.shields.io/badge/customization-infinite-brightgreen?style=for-the-badge)
@@ -48,7 +47,7 @@ This project is intentionally designed to be:
 * Add your own labels and structure without complexity
 * Use it directly via the **dashboard or by editing CSV files**
 
-> ![NOTE]
+> [!NOTE]
 > 👉 The goal was to make this so simple that even on your busiest or lowest-energy days, you can quickly log an expense without friction.
 
 Honestly, the ability to create **custom categories and labels** was the main motivation behind building this, and you can fully make it your own too.
