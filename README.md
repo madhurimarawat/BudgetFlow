@@ -106,11 +106,13 @@ BudgetFlow/
 │
 └── data/                  # Auto-generated data storage
     └── 2026/
-        ├── january_2026.csv
-        ├── february_2026.csv
-        ├── march_2026.csv
+        ├── 01_January_2026.csv
+        ├── 02_February_2026.csv
+        ├── 03_March_2026.csv
         └── ...
 ```
+
+Visit [Explanation](File_Naming_Explanation.md)
 
 ---
 
@@ -127,15 +129,82 @@ BudgetFlow/
 
 ---
 
-## 🔮 Future Improvements
+## ⚙️ Advanced Features
 
-* 🎯 Budget limits per category
-* 📅 Monthly comparison analytics
-* ☁️ Optional cloud backup
-* 📊 Yearly data consolidation (combining monthly CSVs into a single yearly file, currently exploring the best approach)
+### 🎉 Event Expense Tracking
 
-💡 I’m always open to **contributions, suggestions, and feedback** to improve this project further.
-Future updates may include enhancements based on usability, performance, and data organization.
+For large one-time events (e.g., Marriage, Birthday, Trips), BudgetFlow supports a **separate event tracking system**:
+
+* Store detailed event expenses in a dedicated file:
+```
+01_January_2026_Marriage.csv
+```
+
+* Track multiple categories like:
+- Decoration 🎀  
+- Food 🍽️  
+- Venue 🏛️  
+
+* Once completed, add a **single summarized entry** to the monthly file:
+
+```
+Category: Event 🎉
+Subcategory: Marriage
+Amount: Total Expense
+```
+
+> [!TIP]
+> This keeps monthly data clean while preserving full event-level details.
+
+Visit [Event Expense Explanation](Event_Expense_Explanation.md) and [Code](Event_Expense_Manager.py)
+
+---
+
+### 🧩 Yearly & 5-Year Data Merger
+
+Includes a separate tool to:
+
+* 📅 Merge all monthly data into a **yearly dataset**
+* 🧩 Combine multiple years into **rolling 5-year datasets**
+
+> [!NOTE]
+> Useful for long-term analysis and exporting clean datasets.
+
+Visit [Code](Streamlit_One_Year_Five_Year_Merger.py)
+
+---
+
+### 💼 Salary Timing Handling
+
+Even if salary is credited mid-month:
+
+* Always track data from **1st to 31st**
+* Maintain a consistent monthly structure
+
+Optional:
+```
+Salary_Addition_Date.csv
+```
+
+> [!IMPORTANT]
+> Keeps your system consistent and avoids breaking analysis logic.
+
+Visit [Explanation](Salary_Delayed_Expenses_Explanation.md)
+
+---
+
+### ☁️ Backup Strategy
+
+To prevent data loss:
+
+* 📁 Backup raw `data/` folder regularly
+* 📊 Export yearly merged files
+* 🧩 Export 5-year merged files
+
+> [!TIP]
+> This creates multiple recovery layers and ensures long-term safety.
+
+Visit [Explanation](Drive_Backup_Explanation.md)
 
 ---
 

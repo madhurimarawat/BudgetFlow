@@ -112,18 +112,18 @@ st.sidebar.header("➕ Add Entry Month")
 selected_month = st.sidebar.selectbox(
     "Month",
     [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
+        "01_January",
+        "02_February",
+        "03_March",
+        "04_April",
+        "05_May",
+        "06_June",
+        "07_July",
+        "08_August",
+        "09_September",
+        "10_October",
+        "11_November",
+        "12_December",
     ],
 )
 
@@ -135,7 +135,7 @@ selected_year = st.sidebar.number_input(
 folder_path = os.path.join(BASE_FOLDER, str(selected_year))
 os.makedirs(folder_path, exist_ok=True)
 
-file_path = os.path.join(folder_path, f"{selected_month.lower()}_{selected_year}.csv")
+file_path = os.path.join(folder_path, f"{selected_month}_{selected_year}.csv")
 
 st.info(random.choice(QUOTES))
 
